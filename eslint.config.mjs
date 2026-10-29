@@ -8,7 +8,11 @@ export default defineConfig([
     files: ["**/*.{js,mjs,cjs}"],
     plugins: { js, stylistic: stylistic },
     extends: ["js/recommended"],
-    rules: { "@stylistic/semi :": ["error", "always"] },
+    rules: {
+      "@stylistic/semi :": ["error", "always"],
+      quotes: ["error", "double"],
+      "no-var": "error",
+    },
     languageOptions: { globals: globals.node },
   },
 ]);
